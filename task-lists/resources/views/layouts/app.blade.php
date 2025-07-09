@@ -11,6 +11,11 @@
 <body>
     <h1>@yield('title')</h1>
     <div>
+        @if (session('success'))
+            <div style="color: green;">
+                {{ session('success') }}
+            </div>
+        @endif
         @yield('content')
     </div>
 
